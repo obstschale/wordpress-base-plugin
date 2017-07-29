@@ -2,17 +2,19 @@
 /**
  * @wordpress-plugin
  * Plugin Name:       WordPress Base Plugin
- * Plugin URI:        https://github.com/dmhendricks/wordpress-base-plugin
+ * Plugin URI:        https://github.com/obstschale/wordpress-base-plugin
  * Description:       A boilerplate for WordPress plugins
- * Version:           0.1.2
- * Author:            Daniel M. Hendricks
- * Author URI:        https://2lab.net
+ * Version:           0.2.0
+ * Author:            Hans-Helge Buerger
+ * Author URI:        https://hanshelgebuerger.de
  * License:           GPL-2.0
  * License URI:       https://opensource.org/licenses/GPL-2.0
+ * Text Domain:       wordpress-base-plugin
+ * Domain Path:       /languages
  * GitHub Plugin URI: githubusername/project-slug
  */
 
-/*	Copyright 2017	  Daniel M. Hendricks (https://www.danhendricks.com/)
+/*	Copyright 2017	  Hans-Helge Buerger (https://hanshelgebuerger.de)
 
 		This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -35,7 +37,7 @@ require( __DIR__ . '/vendor/autoload.php' );
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 // Initialize plugin - Change to use your own namespace
-new \Nimbium\MyPlugin\Plugin(array(
+$plugin = new \VendorName\PluginName\Plugin(array(
 	'data' => get_plugin_data(__FILE__),
 	'path' => realpath(plugin_dir_path(__FILE__)).DIRECTORY_SEPARATOR,
 	'url' => plugin_dir_url(__FILE__),
@@ -44,4 +46,5 @@ new \Nimbium\MyPlugin\Plugin(array(
 	'object_cache_expire' => 72, // In hours
 	'prefix' => 'myplugin_' // Change to your own unique field prefix
 ));
-?>
+
+$plugin->init();

@@ -31,7 +31,7 @@
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "Obstschale\\MyPlugin\\": "app/"
+      "VendorName\\PluginName\\": "app/"
     }
   }
 }
