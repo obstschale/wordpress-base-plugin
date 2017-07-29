@@ -3,8 +3,8 @@
 namespace VendorName\PluginName;
 
 use VendorName\PluginName\PostTypes\CPT;
-use VendorName\PluginName\Shortcodes\Shortcodes;
 use VendorName\PluginName\Widgets\WidgetLoader;
+use VendorName\PluginName\Shortcodes\ShortcodeLoader;
 
 class Plugin
 {
@@ -48,7 +48,8 @@ class Plugin
         new WidgetLoader();
 
         // Deploy shortcodes
-        new Shortcodes();
+        $shortcodeLoader = new ShortcodeLoader();
+        $shortcodeLoader->init();
 
     }
 

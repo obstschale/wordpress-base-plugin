@@ -2,12 +2,10 @@
 
 namespace VendorName\PluginName\Shortcodes;
 
-use VendorName\PluginName\Plugin;
-
-class Shortcodes extends Plugin
+class HelloShortcode implements ShortcodeInterface
 {
 
-    public function __construct()
+    public function addShortcode()
     {
 
         // Usage: [hello name="Daniel"]
