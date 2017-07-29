@@ -32,7 +32,18 @@ It may also be used as the means of [separating custom code](http://www.billeric
 #### 0.2.0
 From this point on, obstschale/wordpress-base-plugin is developed separately, due to some different ideas.
 
-* 
+* Introduce new project structure
+* Move Widgets, Shortcodes, Post Types to separate directories
+* Split `WidgetLoader` into separate files
+* Add `ShortcodeLoader`, which handles all shortocde classes
+* Add `ShortcodeInterface`. All Shortcode classes need to implement this interface.
+* Use Laravel's Code Style across project
+* Move `assets/` to `resources/`
+* Use Laravel Mix (Webpack) for SASS and JS compiler
+  * Compiled files will be copied to `public/`
+  * Use `yarn run production` when plugin version is deployed
+  * Use `yarn run development` during dev for file watcher
+* Remove `vendor/` from repo
 
 #### 0.1.2
 
