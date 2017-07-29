@@ -1,61 +1,37 @@
 {
-  "name": "dmhendricks/wordpress-base-plugin",
+  "name": "obstschale/wordpress-base-plugin",
   "type": "wordpress-plugin",
   "description": "A bloilerplate for WordPress plugins",
-  "keywords": ["wordpress", "plugin", "boilerplate", "carbonfields"],
-  "homepage": "https://2lab.net",
+  "keywords": ["wordpress", "plugin", "boilerplate", "template"],
+  "homepage": "https://github.com/obstschale/wordpress-base-plugin",
   "license": "GPL-2.0",
   "authors": [
     {
       "name": "Daniel M. Hendricks",
       "homepage": "https://danhendricks.com",
       "role": "Developer"
+    },
+    {
+      "name": "Hans-Helge Buerger",
+      "homepage": "https://hanshelgebuerger.de",
+      "role": "Developer"
     }
   ],
   "support": {
-    "issues": "https://github.com/dmhendricks/wordpress-base-plugin/issues/",
-    "wiki": "https://github.com/dmhendricks/wordpress-base-plugin/wiki/",
-    "source": "https://github.com/dmhendricks/wordpress-base-plugin/"
+    "issues": "https://github.com/obstschale/wordpress-base-plugin/issues/",
+    "wiki": "https://github.com/obstschale/wordpress-base-plugin/wiki/",
+    "source": "https://github.com/obstschale/wordpress-base-plugin/"
   },
-  "repositories": [
-      {
-          "type": "package",
-          "package": {
-            "name": "jashkenas/underscore",
-            "version": "1.8.3",
-            "dist": {
-              "type": "zip",
-              "url": "https://github.com/jashkenas/underscore/archive/1.8.3.zip",
-              "reference": "master"
-            },
-            "autoload": {
-                "classmap": ["."]
-            }
-        }
-      }
-  ],
   "require": {
-    "php": ">=5.3.2",
-    "mnsami/composer-custom-directory-installer": "*",
-    "htmlburger/carbon-fields": "1.5",
-    "jjgrainger/posttypes": "*",
-    "jashkenas/underscore": ">=1.8.0",
-    "composer/installers": "*"
-  },
-  "extra":{
-    "installer-paths":{
-      "./vendor/carbon-fields": ["htmlburger/carbon-fields"]
-    }
+    "php": ">=5.6.0",
+    "htmlburger/carbon-fields": "^2.0.4",
+    "jjgrainger/posttypes": "^1.1.2",
+    "composer/installers": "^1.3"
   },
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "Nimbium\\MyPlugin\\": "app/"
+      "VendorName\\PluginName\\": "app/"
     }
-  },
-  "scripts": {
-      "pre-autoload-dump": [
-        "rm -rf vendor/carbon-fields/.git*; rm -rf vendor/composer/installers/.git*; rm -rf vendor/jjgrainger/posttypes/.git*"
-      ]
   }
 }
