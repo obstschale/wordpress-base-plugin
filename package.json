@@ -1,9 +1,5 @@
 {
   "name": "wordpress-base-plugin",
-  "version": "0.2.0",
-  "description": "A bloilerplate for WordPress plugins",
-  "main": "index.js",
-  "repository": "git@github.com:obstschale/wordpress-base-plugin.git",
   "author": "Hans-Helge Buerger <mail@hanshelgebuerger.de>",
   "license": "GPLv2",
   "scripts": {
